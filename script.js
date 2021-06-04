@@ -31,8 +31,10 @@ function loadInfo(launch){
 
     $.ajax({
     url: queryURL + launch,
-    method: "GET"
+    method: "GET",
     }).then(function(response){
+        console.log("Finding flight #: ", launch);
+        console.log(response);
         //set details of page with response from server
         upcoming = response.upcoming;
         details = response.details;
